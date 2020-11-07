@@ -11,7 +11,6 @@ const App = () => {
   };
   const operatorHandler = (operator) => {
     // let str = String(display).substr(0, display.length - 1);
-
     isNaN(parseInt(display[display.length - 1]))
       ? setDisplay(
           `${String(display).substr(0, display.length - 1)}${operator}`
@@ -22,7 +21,9 @@ const App = () => {
   return (
     <div className="flex-container">
       <div className="container">
-        <div className="display">{display}</div>
+        <div className="display">
+          <div>{display}</div>
+        </div>
         <button onClick={() => inputHandler(1)}>1</button>
         <button onClick={() => inputHandler(2)}>2</button>
         <button onClick={() => inputHandler(3)}>3</button>

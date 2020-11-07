@@ -1,0 +1,97 @@
+/* Using flexBox
+
+<-------- JUSTIFY AXIS -------->
+^
+|
+|
+| ALIGN AXIS
+|
+^
+
+ */
+
+.flex-container {
+  display: flex;
+  background-color: #c0c0c0;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  height: 400px;
+  justify-content: flex-start;
+  align-content: flex-start;
+  /*
+  percentage sizes causing issues with centering
+  height: 90%;
+  width: 70%;
+  */
+  padding: 10px;
+  padding-top: 10px;
+  background-color: grey;
+}
+/* Make a flex Item bigger than rest */
+.big-flex {
+  /*flex-grow: 2;*/
+  flex-basis: 100px;
+}
+.display {
+  flex-basis: 500px;
+  background-color: black;
+  height: 150px;
+  color: #fff;
+}
+
+button {
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  font-size: 1em;
+  background-color: #e0e1e6;
+  color: #888888;
+  outline: 1px solid #888888;
+  margin: 5px;
+}
+
+/*
+.calc-wrapper {
+  height: 360px;
+  width: 70%;
+  background-color: #636e72;
+}
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.input {
+  height: 4em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1em;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 0.5em;
+  outline: 1px solid #888888;
+}
+
+.button-wrapper {
+  height: 4em;
+  width: 0.1em;
+  display: flex;
+  flex: 1;
+  margin: 2px;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  background-color: #e0e1e6;
+  color: #888888;
+  outline: 1px solid #888888;
+}
+*/

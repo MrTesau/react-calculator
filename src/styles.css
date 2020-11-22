@@ -24,7 +24,7 @@ https://www.w3.org/TR/css-flexbox-1/images/flex-direction-terms.svg
 
 .container {
   display: grid;
-  width: 40%;
+  width: 50%;
   height: 70%;
   grid-template-columns: 20% 20% 20% 20% 20%;
   grid-column-gap: 0px;

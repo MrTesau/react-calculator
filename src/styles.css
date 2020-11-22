@@ -24,11 +24,11 @@ https://www.w3.org/TR/css-flexbox-1/images/flex-direction-terms.svg
 
 .container {
   display: grid;
-  width: 30%;
+  width: 40%;
   height: 70%;
   grid-template-columns: 20% 20% 20% 20% 20%;
   grid-column-gap: 0px;
-  padding: 20px;
+  padding: 10px;
   padding-top: 30px;
   background-color: hsl(0, 0%, 90%);
   grid-row-gap: 5px;

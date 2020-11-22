@@ -17,8 +17,7 @@ const App = () => {
     // eslint-disable-next-line
     if (input == "-") {
       if (currOp != "") {
-        let currDisplay = display.replace(currOp, "-");
-        setDisplay(currDisplay);
+        setDisplay(`${display}${input}`);
         setOp("-");
       } else {
         setDecimal(false);
@@ -35,13 +34,21 @@ const App = () => {
   const operatorHandler = (operator) => {
     // let str = String(display).substr(0, display.length - 1);
     if (currOp != "") {
-      // replace display[currOp] with input
-      let currDisplay = display.replace(currOp, operator);
-
-      setDisplay(currDisplay);
-      setOp(operator);
-
-      setDecimal(false);
+      if (currOp == "-") {
+        let cut =
+          display[String(display).indexOf(currOp) - 1] +
+          display[String(display).indexOf(currOp)];
+        console.log(cut);
+        let currDisplay = display.replace(cut, operator);
+        setDisplay(currDisplay);
+        setOp(operator);
+      } else {
+        // replace display[currOp] with input
+        let currDisplay = display.replace(currOp, operator);
+        setDisplay(currDisplay);
+        setOp(operator);
+        setDecimal(false);
+      }
     } else {
       display[display.length - 1] == "-"
         ? setDisplay(`${display}${operator}`)
